@@ -28,7 +28,7 @@ public class TestsFuncionales {
 
 		System.out.println(">>> Iniciando obtenerSaldo()");
 
-		driver.get("http://localhost:9090/");
+		driver.get("http://test:9090/");
 		TimeUnit.SECONDS.sleep(3);
 
 		driver.findElement(By.id("userid")).sendKeys("666");
