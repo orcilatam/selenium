@@ -2,6 +2,7 @@ package org.openqa.selenium.aquarella;
 
 import java.lang.*;
 import java.util.*;
+import java.net.*;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -9,16 +10,18 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.*;
+import org.openqa.selenium.remote.*;
 import org.openqa.selenium.support.ui.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.*;
 
 public class TestsFuncionales {
-	private static FirefoxDriver driver;
+	private static WebDriver driver;
 	WebElement element;
  
 	@BeforeAll
-	public static void openBrowser() {
-		driver = new FirefoxDriver();
+	public static void openBrowser() throws MalformedURLException {
+		FirefoxOptions firefoxOptions = new FirefoxOptions();
+		driver = new RemoteWebDriver(new URL("http://selenium:4444/wd/hub"), firefoxOptions);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	} 
 
