@@ -35,7 +35,8 @@ Por simplicidad `selenium ` es el mismo `test` en nuestro caso.
 2. Levante la aplicación de ejemplo *en su propio terminal* de la siguiente forma:
 
 	```sh
-	java -jar target/portal-0.0.1-SNAPSHOT.jar
+	cd ~/curso/aquarella
+	java -jar target/portal-aquarella-*.war
 	```
 
 3. Cree un job en Jenkins del tipo *Multibranch pipeline* apuntando a este repositorio, se recomienda usar el nombre “QA”, con pipeline como código definido en *Jenkinsfile*.
