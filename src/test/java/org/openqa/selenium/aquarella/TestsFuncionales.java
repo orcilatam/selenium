@@ -22,7 +22,7 @@ public class TestsFuncionales {
 	public static void openBrowser() throws MalformedURLException {
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		driver = new RemoteWebDriver(new URL("http://selenium:4444/wd/hub"), firefoxOptions);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	} 
 
 	@Test
@@ -32,10 +32,10 @@ public class TestsFuncionales {
 		System.out.println(">>> Iniciando obtenerSaldo()");
 
 		driver.get("http://test:9090/");
-		TimeUnit.SECONDS.sleep(3);
+		TimeUnit.SECONDS.sleep(10);
 
 		driver.findElement(By.id("userid")).sendKeys("666");
-		TimeUnit.SECONDS.sleep(3);
+		TimeUnit.SECONDS.sleep(10);
 
 		driver.findElement(By.id("ingresar")).click();
 
