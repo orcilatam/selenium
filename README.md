@@ -42,3 +42,7 @@ Por simplicidad `selenium ` es el mismo `test` en nuestro caso.
 3. Cree un job en Jenkins del tipo *Multibranch pipeline* apuntando a este repositorio, se recomienda usar el nombre “QA”, con pipeline como código definido en *Jenkinsfile*.
 
 4. Ejecute el pipeline creado en el paso 3.
+
+---
+
+Copyright &copy; 2021 Marco Bravo, con licencia [GPL v3](LICENSE)
